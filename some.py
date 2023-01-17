@@ -8,13 +8,14 @@ def odd(n):
     return bool(n % 2)
 
 def main():
-    print(some([0, "", True]))
-    print(some([0, "", False]))
-    print(some([0, "", 4]))
-    print(some([0, 1, 4], lambda x: isinstance(x, int) and x % 2))
-    print(some([0, 2, 4], odd))
-    print(some({'a string', ''}, len))
-    print(some({tuple(), ''}, len))
+    assert(some([0, "", True]))
+    assert(some([0, "", False]) == False)
+    assert(some([0, "", 4]))
+    assert(some([0, 1, 4], lambda x: isinstance(x, int) and x % 2))
+    assert(some([0, 2, 4], odd) == False)
+    assert(some({'a string', ''}, len))
+    assert(some({tuple(), ''}, len) == False)
+    print("success")
 
 
 
