@@ -15,6 +15,7 @@ def main():
     assert(some([]) == False)
     assert(some([0]) == False)
     assert(some([1]))
+    assert(some([1,2]))
     assert(some([0, ""]) == False)
     assert(some([0, "", True]))
     assert(some([0, "", False]) == False)
